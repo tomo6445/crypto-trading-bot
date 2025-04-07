@@ -1,0 +1,162 @@
+{
+  "api_credentials": {
+    "binance": {
+      "api_key": "YOUR_BINANCE_API_KEY",
+      "api_secret": "YOUR_BINANCE_API_SECRET"
+    },
+    "kucoin": {
+      "api_key": "YOUR_KUCOIN_API_KEY",
+      "api_secret": "YOUR_KUCOIN_API_SECRET",
+      "passphrase": "YOUR_KUCOIN_PASSPHRASE"
+    },
+    "ftx": {
+      "api_key": "YOUR_FTX_API_KEY",
+      "api_secret": "YOUR_FTX_API_SECRET"
+    }
+  },
+  "social_api_keys": {
+    "twitter": {
+      "consumer_key": "YOUR_TWITTER_CONSUMER_KEY",
+      "consumer_secret": "YOUR_TWITTER_CONSUMER_SECRET",
+      "access_token": "YOUR_TWITTER_ACCESS_TOKEN",
+      "access_token_secret": "YOUR_TWITTER_ACCESS_TOKEN_SECRET"
+    },
+    "reddit": {
+      "client_id": "YOUR_REDDIT_CLIENT_ID",
+      "client_secret": "YOUR_REDDIT_CLIENT_SECRET",
+      "username": "YOUR_REDDIT_USERNAME",
+      "password": "YOUR_REDDIT_PASSWORD",
+      "user_agent": "crypto_sentiment_analyzer by /u/YOUR_USERNAME"
+    }
+  },
+  "telegram_api": {
+    "api_id": "YOUR_TELEGRAM_API_ID",
+    "api_hash": "YOUR_TELEGRAM_API_HASH",
+    "phone": "YOUR_PHONE_NUMBER",
+    "session_file": "telegram_session",
+    "channels": [
+      "binance_announcements",
+      "kucoin_announcements",
+      "CryptoLeakGlobalNetwork",
+      "CryptoSignals_News",
+      "CryptoMoneyTeam",
+      "CryptoBoostSignals"
+    ],
+    "proxy": null
+  },
+  "trading_settings": {
+    "base_trade_amount": 100,
+    "max_trade_amount": 1000,
+    "target_gain_percentage": 0.03,
+    "max_risk_percentage": 0.01,
+    "max_open_trades": 3,
+    "timeframe_minutes": 60,
+    "use_ml": true,
+    "enable_pump_dump_detection": true
+  },
+  "risk_management": {
+    "default_stop_loss_pct": 0.01,
+    "trailing_stop_enabled": true,
+    "trailing_stop_activation_pct": 0.01,
+    "trailing_stop_distance_pct": 0.005,
+    "max_daily_loss_pct": 0.05,
+    "max_drawdown_pct": 0.15
+  },
+  "strategy_weights": {
+    "order_book": 0.25,
+    "technical": 0.35,
+    "arbitrage": 0.15,
+    "pump_dump": 0.25
+  },
+  "timeframes": {
+    "technical_analysis": ["1m", "5m", "15m", "1h"],
+    "order_book_update_seconds": 1,
+    "social_data_update_minutes": 5,
+    "pump_detection_update_seconds": 30
+  },
+  "trading_pairs": {
+    "major": [
+      "BTCUSDT",
+      "ETHUSDT"
+    ],
+    "mid_caps": [
+      "ADAUSDT",
+      "SOLUSDT",
+      "DOTUSDT",
+      "AVAXUSDT",
+      "MATICUSDT"
+    ],
+    "small_caps": [
+      "SHIBUSDT",
+      "DOGEUSDT",
+      "NEARUSDT",
+      "APEUSDT",
+      "GALAUSDT"
+    ],
+    "blacklist": [
+      "LUNAUSDT",
+      "SRMUSDT"
+    ]
+  },
+  "pump_dump_settings": {
+    "lookback_hours": 48,
+    "min_volume_increase": 5,
+    "min_price_increase_pct": 3,
+    "min_confidence_threshold": 0.7,
+    "max_trade_duration_minutes": 30,
+    "volume_spike_scaling": true,
+    "use_anomaly_detection": true,
+    "enable_alerts": true
+  },
+  "notification_settings": {
+    "enable_email": false,
+    "email": {
+      "smtp_server": "smtp.gmail.com",
+      "smtp_port": 587,
+      "sender_email": "your_email@gmail.com",
+      "sender_password": "your_app_password",
+      "recipient_email": "your_email@gmail.com"
+    },
+    "enable_telegram": false,
+    "telegram_bot": {
+      "token": "YOUR_TELEGRAM_BOT_TOKEN",
+      "chat_id": "YOUR_TELEGRAM_CHAT_ID"
+    },
+    "notify_on_trade_open": true,
+    "notify_on_trade_close": true,
+    "notify_on_pump_detection": true,
+    "notify_on_error": true
+  },
+  "system_settings": {
+    "log_level": "INFO",
+    "enable_debug_mode": false,
+    "data_directory": "./data",
+    "log_directory": "./logs",
+    "backup_directory": "./backups",
+    "max_log_size_mb": 10,
+    "max_log_files": 5,
+    "backup_interval_hours": 24
+  },
+  "advanced_settings": {
+    "use_fast_order_books": true,
+    "websocket_reconnect_attempts": 5,
+    "websocket_reconnect_delay_seconds": 5,
+    "api_request_timeout_seconds": 10,
+    "enable_trade_history_recording": true,
+    "ml_model_update_interval_hours": 24,
+    "exchange_data_proxy": null,
+    "sentiment_thresholds": {
+      "very_negative": -0.75,
+      "negative": -0.25,
+      "neutral": 0.25,
+      "positive": 0.75,
+      "very_positive": 1.0
+    },
+    "optimization_settings": {
+      "use_high_precision_mode": false,
+      "thread_pool_size": 4,
+      "max_memory_usage_mb": 512,
+      "enable_profiling": false
+    }
+  }
+}
